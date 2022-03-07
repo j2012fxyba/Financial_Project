@@ -1,0 +1,22 @@
+
+
+https://github.com/j2012qazwsx/myGitHubProject.git   自己的git地址
+
+https://blog.csdn.net/qq_35246620/article/details/67636563
+
+
+Hello World · GitHub 指南
+
+
+
+https://blog.csdn.net/qq_35246620/article/details/65628903    注册用户-新建仓库
+
+包括仓库、分支、提交代码和 Pull 请求。在这里，你将会用一个流行的方式创建和检查代码、创建你自己的 Hello World 仓库和学习 GitHub 的 Pull 请求工作流
+
+
+https://blog.csdn.net/qq_35246620/article/details/65628903  创建仓库分支
+
+
+
+而GitHub是一个代码托管网站，背后使用Git作为版本管理工具（而非svn）。主要服务是将你的项目代码托管到云服务器上，而非存储在自己本地硬盘上。
+类似的网站还有gitlab.com，bitbucket.com，coding.com(国内)，gitee.com(国内)
