@@ -1,0 +1,39 @@
+# 6-2 attribute_history()函数 代码实现1
+# 6-2 attribute_history()函数 代码实现2
+# 6-3 get_fundamentals_continuously()函数
+# 6-3 get_current_data()函数
+# 6-4 获取指数成分股函数get_index_stocks()
+# 6-4 获取行业成分股函数get_industry_stocks()
+# 6-5 获取概念成本股函数get_concept_stocks()
+# 6-5 获取限售解禁数据函数get_locked_shares()
+# 6-6 获取所有数据信息函数get_all_securities() 代码实现1
+# 获取平台中所有ETF的信息，打印前10支
+# 获取000001.XSHE的上市日期、名称、类型
+# df = get_price('000001.XSHE', count = 2, end_date='2015-01-31', frequency='daily', fields=['open', 'close']) 
+df = get_price('000001.XSHE', start_date='2015-12-01 14:00:00', end_date='2015-12-02 12:00:00', frequency='1m')
+
+# 获取多只股票
+# 获取中证100的所有成分股的2015年的天数据 
+df = get_price(get_price(get_index_stocks('000903.XSHG'),panel = False)) , 返回一个[pandas.Panel] 
+open = df['open'] # 获取开盘价的[pandas.DataFrame], 行索引是[datetime.datetime]对象, 列索引是股票代号 
+volume = df['volume']  # 获取交易量的[pandas.DataFrame] 
+
+# 6-7 获取龙虎榜数据get_billboard_list() 代码实现1
+
+# 6-7 获取龙虎榜数据get_billboard_list() 代码实现2
+# 获得2022-09-01前两个交易日内的龙虎榜数据中的股票代码、异常波动名称、营业部名称、出资价格排名，打印前十条
+df=get_billboard_list(stock_list=None, end_date = '2022-09-01', count =2)
+print(df[['code','abnormal_name','sales_depart_name','rank']][:10])
+
+Test
+# 计算最大值与最小值
+# 计算极差
+# 计算成交量加权平均价格
+# 计算中位数
+# 收盘价的中位数
+# 计算方差
+# 收盘价的方差
+# 计算股票收益率、年波动率及月波动率
+# 波动率是对价格变动的一种度量，历史波动率可以根据历史价格数据计算得出。计算历史波动率时，需要用到对数收益率
+# 年波动率等于对数收益率的标准差除以其均值，再乘以交易日的平方根，通常交易日取250天
+# 月波动率等于对数收益率的标准差除以其均值，再乘以交易月的平方根。通常交易月取12月
