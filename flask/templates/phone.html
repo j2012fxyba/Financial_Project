@@ -1,0 +1,23 @@
+<script>
+
+    function init()   /*编写ajax程序 得到网页值保存在变量中，然后转移到显示框里*/
+    {
+        http=new XMLHttpRequest();
+        //通过get方法 访问 /show 页面
+        http.open('get','/show','false');
+        http.send(null);
+        mesg=http.responseText,
+        document.getElementById('sMsg').innerHTML=mesg;   /*获取网页的数据保存在mesg变量中*/
+        document.getElementById("jMsg").innerHTML="javaScript Message";
+        
+    }
+</script>
+
+
+<body onload="init()">
+    Testing<br>
+    <span id="hMsg">Html Message</span> <br>
+    <span id="jMsg"></span>
+    <span id="sMsg"></span>
+
+</body>

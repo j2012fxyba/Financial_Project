@@ -1,0 +1,58 @@
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>手机信息展示</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="frm" action="/show" method="post">
+    <table>
+        <tr>
+            <th>品牌</th>
+            <th>型号</th>
+            <th>价格</th>
+        </tr>
+        <tr>
+            <td>华为</td>
+            <td>P9</td>
+            <td>3800</td>
+        </tr>
+        <tr>
+            <td>苹果</td>
+            <td>P10</td>
+            <td>4200</td>
+        </tr>
+        <tr>
+            <td>三星</td>
+            <td>P11</td>
+            <td>5800</td>
+        </tr>
+    </table>
+
+    
+    <div class="container">
+        <a href="/logout">退出</a>
+    </div>
+</form>
+</body>
+</html>
+

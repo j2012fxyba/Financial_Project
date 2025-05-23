@@ -1,0 +1,26 @@
+<h1>课程教程</h1>
+<script>
+    function show_course(key){
+        var course1=document.getElementById('course').value;
+        var http=new XMLHttpRequest();
+        http.open('GET',"/show_course?course="+course1,false);
+        http.send(null);
+
+        var msg=http.responseText;
+        var books=eval("("+msg+")");
+        var str="";
+        for (var i=0;i<books.length;i++)
+        str=str+"<li>"+books[i]+"</li>";
+        document.getElementById('books').innerHTML="<ol>"+str+"</ol>";
+
+    }
+
+</script>
+
+<div>
+课程 <input type="text" name="course" id="course">
+<input type="button" value="查看" id="search" onclick="show_course()"> 
+<!--注意这里调用的是flask 服务的javascript下面的方法-->
+
+</div>
+<div id="books"></div>

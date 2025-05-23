@@ -1,0 +1,20 @@
+
+
+<script>
+    function init(){
+        http=new XMLHttpRequest();
+        http.open("get",'/ajax',false);
+        http.send(null);
+        message=http.responseText;
+        document.getElementById("sMsg").innerHTML=message;
+        document.getElementById("jMsg").innerHTML="javascript 信息";
+
+    }
+</script>
+
+<body onload="init()">
+    jingtaixinxi<br>
+    <div id="hMsg"></div>
+    <div id="jMsg"></div>
+    <div id="sMsg"></div>
+</body>
