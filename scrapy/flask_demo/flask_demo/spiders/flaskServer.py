@@ -24,18 +24,14 @@ def getFile(fileName):
 
 
 
-#这是一个装饰器，它告诉Flask当用户访问网站根目录/in,时应该调用哪个函数
+
 @app.route('/ind')
 def index():
     #这行代码调用了getFile函数，并返回了books.html文件的内容.也就是说给参数fileName 指定了book.html的内容
     return getFile('D:\\tool\\scrapydemo\\flaskDemo\\flaskDemo\\spiders\\books.html')
 
 
-#在 Flask 中，尖括号 <> 用于定义路由中的动态部分.
-# 当你使用 @app.route('/<section>') 时，你是在告诉 Flask，任何匹配 / 后跟任何字符串的 URL 都应该由 process 函数来处理。
-# 这个字符串将被赋值给 section 参数
-#例如，如果用户访问 /home，section 参数将被设置为 'home'。
-#如果用户访问 /about，section 参数将被设置为 'about'。这样，你可以根据 section 的值来决定返回哪个文件的内容
+
 
 @app.route('/<section>')
 def process(section):
