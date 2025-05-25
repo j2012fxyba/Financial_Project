@@ -1,0 +1,22 @@
+<script>
+    function init(){
+        http=new XMLHttpRequest();
+        http.open("get","/show",false);
+        http.send(null);
+        msg=http.responseText;
+        //网页元素通过加载Script脚本返回的 的msg  和  javascript Message
+        document.getElementById("sMsg").innerHTML=msg;
+        document.getElementById("jMsg").innerHTML="javascript Message";
+
+    }
+
+</script>
+<body onload="init()">
+    Testing<br>
+    <!---br 用于在不启用新段落的情况下插入行--> <!---强制换行 是一个自闭标签-->
+    <span id="hMsg">Html Message</span><br> 
+    <span id="jMsg"></span><br>
+    <span id="sMsg"></span><br>
+
+
+</body>
