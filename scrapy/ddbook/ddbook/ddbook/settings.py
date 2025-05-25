@@ -76,8 +76,8 @@ ITEM_PIPELINES = {
 
 # 配置 MySQL 数据库  
 MYSQL_HOST = 'localhost'   #本地数据库
-MYSQL_USER = 'root'
-MYSQL_PASSWORD = '123456'
+MYSQL_USER = '******'
+MYSQL_PASSWORD = '******'
 MYSQL_DB = 'bigdata'
 
 # 其他设置
