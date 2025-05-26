@@ -33,7 +33,6 @@ class flask_spider(scrapy.Spider):
                 full_url=urllib.parse.urljoin(link,scrapy.Selector.response.url)
                 yield scrapy.Request(url=full_url,callback=self.parse)
                 
-                #找到 html下面所有的a标签里面的 link ,从 link中提权 href
                 #列表推导式中的 if link.get('href')是一个条件，它确保只有当<a>标签具有href属性时，才会将其URL添加到结果列表中。
                 #hrefs=[link.get('href') for link in BeautifulSoup.find_all('a') if link.get('href')]
         except Exception as er:
