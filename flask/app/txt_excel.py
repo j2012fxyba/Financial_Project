@@ -1,10 +1,10 @@
 import pandas as pd
 
 # 指定TXT文件路径
-txt_file_path = 'D:\\tool\\PythonTest\\flask\\flask_templates\\data_bmi.txt'
+txt_file_path = '\\flask\\flask_templates\\data_bmi.txt'
 
 # 指定XLSX文件路径
-xlsx_file_path = 'D:\\tool\\PythonTest\\flask\\flask_templates\\bmi_data.xlsx'
+xlsx_file_path = 'flask\\flask_templates\\bmi_data.xlsx'
 
 # 读取TXT文件，假设文件是以制表符分隔的
 # 如果是以逗号分隔的，可以将sep参数改为','
