@@ -11,7 +11,7 @@ import HTMLTestRunner
 #selenium 传入参数化数据
 class BMI_test1(unittest.TestCase):
 
-    path='D:\\tool\\PythonTest\\flask\\flask_templates\\bmi_data.xlsx'
+    path='\\bmi_data.xlsx'
     sheet_name='bmi_data'    
     def load_data(path,sheet_name):
         workbook=load_workbook(path)
