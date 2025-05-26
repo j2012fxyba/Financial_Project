@@ -104,7 +104,7 @@ def spider_with_pagination():
         df=DataFrame(all_data,columns=row_data[0])   # 使用第一页的列名作为表头
         
         #上涨：3002只 下跌：2187只
-        outfile='D:\\tool\\PythonTest\\AutoTest\\seleniums\\ETF174320.xlsx'
+        outfile='\\seleniums\\ETF174320.xlsx'
         #写入excel文件里面
         df.to_excel(outfile,index=False)
         print(f"所有数据已写入 {outfile}")
