@@ -7,14 +7,6 @@ app=flask.Flask('web',static_folder='D:\\tool\\PythonTest\\flask\\flask_template
                 )
 
 
-''''
-flask 动态获取页面ajax 元素 包含 summit and input canle  and requeset  
-'''
-
-#任务：1 html 页面做一个 用户登录login.html， input password and user 登录成功返回手机信息，
-    #登录失败，提示输入有误 
-
-
 
 @app.route('/login',methods=['GET','POST'])
 def login():
