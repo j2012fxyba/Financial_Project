@@ -85,7 +85,7 @@ def spiderT(start_url):
             respon=urllib.request.urlopen(res)
             data=respon.read()
             imgName=ID+'.'+tExt
-            with open("D:\\tool\\PythonTest\\pachong\\chinadaily\\download\\"+imgName,'ab') as file:
+            with open("\\download\\"+imgName,'ab') as file:
                 file.write(data)
                 print("download"+imgName)
         except Exception as e:
