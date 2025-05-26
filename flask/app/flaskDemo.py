@@ -3,11 +3,7 @@ import os
 
 
 
-'''
-flask 提供一个简单的文件服务器，返回服务器上读取文件给客户端。
-用来处理客户端的请求，客户端请求一个特定文件getFile，服务器函数读取文件内容返回给客户端
 
-'''
 #__name__是Python中的一个特殊变量，它表示当前模块的名称
 app=flask.Flask(__name__)
 
@@ -51,6 +47,5 @@ if __name__=='__main__':
     app.run()
 
 
-#selenium.xpath()的语法：
 
 
