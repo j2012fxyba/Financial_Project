@@ -13,7 +13,7 @@ chrome_option=Options()
 driver=webdriver.Chrome(chrome_options=chrome_option)
 chrome_option.add_argument('--headless')   #无头模式，浏览器在后台运行
 #chrome_option.add_argument('disable-gpu')   禁用gpu模式
-url='http://127.0.0.1:5000/login'
+url='http://local:5000/login'
 driver.get(url)
 
 def login():
