@@ -11,7 +11,7 @@ class TestBMI(unittest.TestCase):
         ("178", "100", "31.6", "obesity")
     ])
 
-    #unittest 框架自动获取 test_打头的测试案例
+   
     def test_bmi_category(self, height, weight, expected_bmi, expected_category):
         """测试BMI分类是否匹配参数化输入"""
         # 计算BMI值
