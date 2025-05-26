@@ -13,8 +13,7 @@ import threading
 
 
 def getHtml(start_url):
-    #Request 创建一个请求对象函数 urlopen发送一个http请求连接,包含 请求头 请求方法体，可以在创建对象时船体更多参数
-    #数据加密   用户认证
+    
     res=urllib.request.Request(start_url,headers=head)
     respon=urllib.request.urlopen(res)
     data=respon.read()
@@ -75,7 +74,7 @@ def spiderImg(html):
                 t.daemon = False    #不能直接调用 是属性 不是方法
                 t.start()
                 threads.append(t)
-                #downImag(url)     #切记 单线程的函数调用方法一定要注释掉 否则运行2次图片下载
+                #downImag(url)     
 
     except Exception as er:
         print(er)  
@@ -98,7 +97,7 @@ def downImag(url):
         html=urllib.request.urlopen(res,timeout=100)
         data=html.read()
 
-        fobj=open("D:\\tool\\PythonTest\\pachong\\chinadaily\\download\\"+str(count)+ext,'+ab') 
+        fobj=open("\\download\\"+str(count)+ext,'+ab') 
         fobj.write(data)
         fobj.close()
         print('download'+str(count)+ext)
