@@ -4,11 +4,7 @@
 from openpyxl import Workbook
 from openpyxl import load_workbook
 
-# 创建新的工作簿和工作表 相当于新建excel,此时内存中将生成一个空的excel文件
-wb = Workbook()
-#wb.create_sheet()  创建新的 sheet 
-#wb.active 是获取当前工作簿中 活动的（active）工作表（即打开 Excel 时默认选中的那个 Sheet）
-#如果工作簿有多个 Sheet，wb.active 会返回 最后一次操作的工作表（相当于 Excel 中当前显示的 Sheet）
+
 sheet = wb.active
 
 #load_workbook('xxx.xlsx') 加载excel 工作表 前提是已经新建 保存好的。
