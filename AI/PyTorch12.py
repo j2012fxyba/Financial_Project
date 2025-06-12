@@ -47,9 +47,3 @@ print("预测:", model.predict(new_X))
 
 
 
-#报错：ValueError: shapes (1,3) and (4,) not aligned: 3 (dim 1) != 4 (dim 0)
-# 原因：new_X 的形状为 (1, 3)，而模型参数的形状为 (4,)。OLS 模型要求输入的形状与模型参数的形状匹配。
-#新特征向量的 add_constant截距项没有生成，new_X 的形状应该是 (1,4)（3个特征 + 1个截距项），
-# 但你的输出显示 (1,3)，说明 sm.add_constant() 未生效。以下是根本原因和解决方案：
-
-
