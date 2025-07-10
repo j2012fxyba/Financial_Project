@@ -5,7 +5,7 @@ import pandas as pd
 
 
 
-data = pd.read_excel('D:\\tool\\CQF\\pachong\\AMZN.xlsx')
+data = pd.read_excel('AMZN.xlsx')
 data['Date'] = pd.to_datetime(data['Date'])
 
 # 计算技术指标
