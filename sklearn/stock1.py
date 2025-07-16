@@ -16,7 +16,7 @@ from sklearn import cluster, covariance, manifold
 构建收益率的相关性矩阵,用亲和传播算法根据相关性自动分组 '''
 
 #读取Excel所有Sheet到字典
-stock_data = pd.read_excel('D:\\tool\\CQF\\pachong\\zhenghe.xlsx', sheet_name=None, index_col='Date')
+stock_data = pd.read_excel('zhenghe.xlsx', sheet_name=None, index_col='Date')
 print(stock_data.keys())
 
 symbol_dict = {
