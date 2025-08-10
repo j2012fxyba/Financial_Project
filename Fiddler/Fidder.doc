@@ -96,7 +96,7 @@ cookie={
 
 
 example 4 
-  GET /data/2.5/forecast?lat=57&lon=-2.15&cnt=3&appid=476b7982c8cc7abb55c02fa82e500698 HTTP/1.1
+  GET /data/2.5/forecast?lat=57&lon=-2.15&cnt=3&appid=******************c02fa82e500698 HTTP/1.1
   
 Request sent 184 bytes of Cookie data:
 
