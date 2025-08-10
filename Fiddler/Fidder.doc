@@ -115,3 +115,6 @@ Composer功能
 伪造请求，进行前后端接口调试
 
 Fiddler 主要用于捕获和分析现有的 HTTP 流量，而不是用于模拟 Composer 的功能
+
+
+https://history.openweathermap.org/data/2.5/history/city?q=Zocca,{country code}&type=hour&start={start}&end={end}&appid={API key}
