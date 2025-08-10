@@ -1,0 +1,117 @@
+使用场景
+Inspectors标签在多种场景下都非常有用，例如：
+1、试Web应用程序时，可以查看请求和响应的详细信息来定位问题。
+2、分析网络性能时，可以查看请求和响应的头信息来了解缓存策略、压缩方式等。
+3、安全测试时，可以查看请求和响应中的身份验证信息、cookie等来判断是否存在安全漏洞。
+综上所述，Inspectors标签是Fiddler工具中一个非常强大的功能部分，它提供了多种方式来查看HTTP请求和响应的内容。通过合理使用这些标签，用户可以更有效地进行Web开发、测试和调试工作。
+
+Example1:
+请求体：
+
+POST /api/v0/users/create_sms_verification_code HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
+Cookie: 
+Hm_lvt_fb5acee01d9182aabb2b61eb816d24ff=1740547082; HMACCOUNT=927F0DF021ACC9A0; Hm_lpvt_fb5acee01d9182aabb2b61eb816d24ff=1740547494; HWWAFSESID=6c457fc13d573bd1b69; HWWAFSESTIME=1740547493988; ds_session_id=7f0f3df5d7004ef8b798fe41550ccc97; 
+smidV2=202502261324590ed4078879b165a09d1bcef6a7ed2fc300b9b5666c39fc390; .thumbcache_6b2e5483f9d858d7c661c5e276b6a6ae=cAB2PMf6gP8tr6mOkow/xH5Jy1oOumUxHa7OR1Nr558gY+iaC3FFo7JyLameEYNpW0kJ0nQotsgwewgNTVAlqA%3D%3D
+
+Raw :
+
+POST https://chat.deepseek.com/api/v0/users/create_sms_verification_code HTTP/1.1
+Host: chat.deepseek.com
+Connection: keep-alive
+Content-Length: 252
+x-client-locale: zh_CN
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
+Origin: https://chat.deepseek.com
+Referer: https://chat.deepseek.com/sign_in
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: Hm_lvt_fb5acee01d9182aabb2b61eb816d24ff=**********; HMACCOUNT=***************; Hm_lpvt_fb5acee01d9182aabb2b61eb816d24ff=**********; HWWAFSESID=6c457fc13d573bd1b69; HWWAFSESTIME=1740547493988; ds_session_id=7f0f3df5d7004ef8b798fe41550ccc97; smidV2=202502261324590ed4078879b165a09d1bcef6a7ed2fc300b9b5666c39fc390; .thumbcache_6b2e5483f9d858d7c661c5e276b6a6ae=cAB2PMf6gP8tr6mOkow/xH5Jy1oOumUxHa7OR1Nr558gY+iaC3FFo7JyLameEYNpW0kJ0nQotsgwewgNTVAlqA%3D%3D
+
+请求内容
+{"locale":"zh_CN","mobile_number":"***********","turnstile_token":"","shumei_verification":{"region":"CN","rid":"2025022613425316907537c7f72da965"},"device_id":"BlcfWg82o2OGLMKXgi2V293I+dvfnXXls9h2GL+VJYupqwMJRiNALiL13QE52A4iA6H09********/KCb+l+Jpg=="}
+
+{"code":0,"msg":"","data":{"code":0,"msg":"SENT_SMS_SUCCESS",
+"data":{"send_window_secs":60},"biz_code":0,"biz_msg":"SENT_SMS_SUCCESS","biz_data":{"send_window_secs":60}}}
+
+响应体：
+
+  
+
+Example2:
+
+
+请求体：
+
+POST https://chat.deepseek.com/api/v0/chat/completion HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
+content-type: application/json
+Cookie: Hm_lvt_fb5acee01d9182aabb2b61eb816d24ff=**********; HMACCOUNT=927F0DF021ACC9A0; Hm_lpvt_fb5acee01d9182aabb2b61eb816d24ff=1740547494; HWWAFSESID=6c457fc13d573bd1b69; HWWAFSESTIME=1740547493988; ds_session_id=7f0f3df5d7004ef8b798fe41550ccc97; smidV2=202502261324590ed4078879b165a09d1bcef6a7ed2fc300b9b5666c39fc390; .thumbcache_6b2e5483f9d858d7c661c5e276b6a6ae=cAB2PMf6gP8tr6mOkow/xH5Jy1oOumUxHa7OR1Nr558gY+iaC3FFo7JyLameEYNpW0kJ0nQotsgwewgNTVAlqA%3D%3D; BENSESSCC_TAG=7f0f3df5d7004ef8b798fe41550ccc97; intercom-session-guh50jw4=RVQ4cDUzbUcvUXA2eU53enVXTTdOcXFhVE1WZmlORThscGtnQ05qSHh4OTlnMjFmQ0djaGtzMVVKTlV0eHpqMWd3Q3RCdXEyVnV3RGJzWk1rVXFTMzZQakdqQWUwTURsSUR6YVJBUjFueTg9LS1TU2laS3JjY2drWWUxeE15eFlJbDBBPT0=--e15c7adcd51665d725ebd436dfb8fc1fbf57e69a; intercom-device-id-guh50jw4=2250dc3b-7c3b-4af3-9f74-0d1e37689faf
+
+{"chat_session_id":"abe04f79-5e0f-4ad0-))))-************","parent_message_id":null,"prompt":"fiddler 响应内容汉字展示位乱码","ref_file_ids":[],"thinking_enabled":false,"search_enabled":false}
+
+
+响应体 
+9c
+data: {"choices":[{"index":0,"delta":{"content":" **","type":"text"}}],"model":"","chunk_token_usage":1,"created":***********,"message_id":2,"parent_id":1}
+
+9e
+data: {"choices":[{"index":0,"delta":{"content":"Rules","type":"text"}}],"model":"","chunk_token_usage":1,"created":1***********,"message_id":2,"parent_id":1}
+
+9b
+data: {"choices":[{"index":0,"delta":{"content":"**","type":"text"}}],"model":"","chunk_token_usage":1,"created":***********,"message_id":2,"parent_id":1}
+
+
+
+
+example 3
+
+登录并 更换头像
+F12找到上传图片的url
+F12 找到上传图片的name
+
+Url=’https://img1.sycdn.baidu.com/2b64016709bfd1ee08970586-200-200.jpg’
+<img class="avator-img" id="js-portrait" src="//img1.sycdn.imooc.com/2b64016709bfd1ee08970586-200-200.jpg" data-portrait="2b64016709bfd1ee08970586" width="192" height="192">
+
+Fiddle 抓取提交的filename
+
+Content-Disposition: form-data; name="fileField"; filename="屏幕截图 2023-03-03 121644.png"
+
+Content-Type: image/png
+
+Fiddler 抓取登录状态的用户缓存id
+Cookie -apsid 
+
+Cookie: imooc_uuid=c67163df-dcad-4fdf-8191-************; imooc_isnew_ct=**********; imooc_isnew=2; Hm_lvt_f0cfcccd7b1393990c78efdeebff3968=1740622928; HMACCOUNT=927F0DF021ACC9A0; PSEID=e2e03d730de4290420b85eead31c9613; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%226607438%22%2C%22first_id%22%3A%22192083581c4140b-0a463bb2be54fb8-26001151-1474560-192083581c5104a%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E8%87%AA%E7%84%B6%E6%90%9C%E7%B4%A2%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC%22%2C%22%24latest_referrer%22%3A%22https%3A%2F%2Fwww.baidu.com%2Flink%22%7D%2C%22identities%22%3A%22eyIkaWRlbnRpdHlfY29va2llX2lkIjoiMTkyMDgzNTgxYzQxNDBiLTBhNDYzYmIyYmU1NGZiOC0yNjAwMTE1MS0xNDc0NTYwLTE5MjA4MzU4MWM1MTA0YSIsIiRpZGVudGl0eV9sb2dpbl9pZCI6IjY2MDc0MzgifQ%3D%3D%22%2C%22history_login_id%22%3A%7B%22name%22%3A%22%24identity_login_id%22%2C%22value%22%3A%226607438%22%7D%2C%22%24device_id%22%3A%22192083581c4140b-0a463bb2be54fb8-26001151-1474560-192083581c5104a%22%7D; loginstate=1; apsid=Q4OWM4NTljYzg2YjQyN2M4N2UyYzA1YzVhYjQ5MDEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANjYwNzQzOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABqXzIwMTIxMTExQDEyNi5jb20AAAAAAAAAAAAAAAAAAGU2OTZkOGQ0YjQyNTRhNGZmODJhNDA3ZWVjZjA3YThh1sy%2FZ4XlHWI%3DY2; last_login_username=j_20121111%40126.com; tgw_l7_route=*****************************; cvde=67bfcc51120d2-11; Hm_lpvt_f0cfcccd7b1393990c78efdeebff3968=1740624345
+  
+file={
+    'fileField':("屏幕截图 2023-03-03 121644.png",open("D:\\****\\********\\AutoTest\\屏幕截图 2023-03-03 121644.png",'rb'),"image/png"),
+    'type':'1'}
+cookie={
+    'apsid':'Q4OWM4NTljYzg2YjQyN2M4N2UyYzA1YzVhYjQ5MDEAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBjYwNzQzOAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBABqXzIwMTIxMTExQDEyNi5jb20AAAABBBBBBBBBBBBBBBBBGU2OTZkOGQ0YjQyNTRhNGZmODJhNDA3ZWVjZjA3YThh1sy/Z4XlHWI=Y2'
+
+}
+
+
+
+example 4 
+  GET /data/2.5/forecast?lat=57&lon=-2.15&cnt=3&appid=476b7982c8cc7abb55c02fa82e500698 HTTP/1.1
+  
+Request sent 184 bytes of Cookie data:
+
+	_ga=GA1.1.1127382445.**********
+	_ga_EDMPFCE1YC=GS1.1.**********.4.0.1741336853.60.0.0
+	_clck=1x029ua%7C2%7Cfu0%7C0%7C1890
+	_ga_31TSX35RJT=GS2.1.s1754796219$o4$g1$t**********$j60$l0$h0
+
+response:
+{"cod":"200","message":0,"cnt":3,"list":[{"dt":1754805600,"main":{"temp":284.33,"feels_like":283.54,"temp_min":284.33,"temp_max":284.8,"pressure":1022,"sea_level":1022,"grnd_level":1015,"humidity":78,"temp_kf":-0.47},
+                                            "weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"clouds":{"all":0},"wind":{"speed":2.29,"deg":238,"gust":2.61},"visibility":10000,"pop":0,"sys":{"pod":"d"},
+                                            "dt_txt":"2025-08-10 06:00:00"},
+                                         {"dt":1754816400,
+                                  "main":{"temp":286.9,"feels_like":286.08,"temp_min":286.9,"temp_max":288.3,"pressure":1023,"sea_level":1023,"grnd_level":1016,"humidity":67,"temp_kf":-1.4},"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03d"}],"clouds":{"all":43},"wind":{"speed":2.27,"deg":191,"gust":2.68},"visibility":10000,"pop":0,"sys":{"pod":"d"},"dt_txt":"2025-08-10 09:00:00"},{"dt":1754827200,"main":{"temp":290.23,"feels_like":289.51,"temp_min":290.23,"temp_max":290.23,"pressure":1023,"sea_level":1023,"grnd_level":1015,"humidity":58,"temp_kf":0},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"clouds":{"all":53},"wind":{"speed":3.86,"deg":171,"gust":4.67},"visibility":10000,"pop":0,"sys":{"pod":"d"},"dt_txt":"2025-08-10 12:00:00"}],"city":{"id":2641549,"name":"Newtonhill","coord":{"lat":57,"lon":-2.15},"country":"GB","population":3284,"timezone":3600,"sunrise":1754799946,"sunset":1754856135}}
+Composer功能 
+伪造请求，进行前后端接口调试
+
+Fiddler 主要用于捕获和分析现有的 HTTP 流量，而不是用于模拟 Composer 的功能
